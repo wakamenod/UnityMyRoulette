@@ -16,9 +16,11 @@ public class RouletteController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            this.rotateSpeed = 10;
+            this.rotateSpeed = 30;
         }
 
         transform.Rotate(0, 0, this.rotateSpeed);
+
+        this.rotateSpeed *= 0.96f;
     }
 }
